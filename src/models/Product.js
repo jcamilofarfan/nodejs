@@ -10,4 +10,4 @@ const productShema = new Schema({
     versionKey: false
 })
 
-export default model("Porduct", productShema);
+export default model("Product", productShema);

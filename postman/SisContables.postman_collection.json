@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "a9b83703-871c-471e-9b18-1fe4a2c3b313",
+		"name": "SisContables",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "List Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "A Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/products/60d74bb75fba5e2be41b378f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"products",
+								"60d74bb75fba5e2be41b378f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZGY3Nzk1MjRhZWU5MzU3MDczOTk3YyIsImlhdCI6MTYyNTI1Nzg3OSwiZXhwIjoxNjI1MzQ0Mjc5fQ.RpZgbvzZsk5nHyzdqR4y0Cud4e8s4TUlj9X7w4LSr_Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/api/products/60df77bf24aee93570739981",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"products",
+								"60df77bf24aee93570739981"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZGY3Nzk1MjRhZWU5MzU3MDczOTk3YyIsImlhdCI6MTYyNTI2MDk4OCwiZXhwIjoxNjI1MzQ3Mzg4fQ.UECgPPSHCkmbiLJ3042g94JOS2xn5EDhwp1jtF0eHhg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"String\",\r\n    \"category\": \"String\",\r\n    \"price\": 123.456,\r\n    \"imgURL\": \"https://contador.tech/wp-content/uploads/2021/06/cropped-logoSN.jpg\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZGY3Nzk1MjRhZWU5MzU3MDczOTk3YyIsImlhdCI6MTYyNTI1Nzg3OSwiZXhwIjoxNjI1MzQ0Mjc5fQ.RpZgbvzZsk5nHyzdqR4y0Cud4e8s4TUlj9X7w4LSr_Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Update Update\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/products/60df77dd24aee93570739985",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"products",
+								"60df77dd24aee93570739985"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"junior\",\r\n    \"email\": \"junior@contador.tech\",\r\n    \"password\": \"password\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignIn",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"jcamilofarfan@contador.tech\",\r\n    \"password\": \"jcamilofarfan\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "CreateUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZGY3Nzk1MjRhZWU5MzU3MDczOTk3YyIsImlhdCI6MTYyNTI2MDk4OCwiZXhwIjoxNjI1MzQ3Mzg4fQ.UECgPPSHCkmbiLJ3042g94JOS2xn5EDhwp1jtF0eHhg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"rolly\",\r\n    \"email\": \"rolly@gmail.com\",\r\n    \"roles\": [\"admin\"]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZGY3Nzk1MjRhZWU5MzU3MDczOTk3YyIsImlhdCI6MTYyNTI2MDk4OCwiZXhwIjoxNjI1MzQ3Mzg4fQ.UECgPPSHCkmbiLJ3042g94JOS2xn5EDhwp1jtF0eHhg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Localhost",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
