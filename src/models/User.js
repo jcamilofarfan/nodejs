@@ -14,10 +14,22 @@ const userSchema = new Schema({
         type: String,
         required: true,
     },
+    code:{
+        type: String,
+        required:true,
+    },
+    company:{
+        ref: "Company",
+        type: Schema.Types.ObjectId,
+    },
     roles: [{
         ref: "Role",
         type: Schema.Types.ObjectId,
-    },],
+    }],
+    status:{
+        ref: "Status",
+        type: Schema.Types.ObjectId,
+    }
 },{
     timestamps: true,
     versionKey: false,

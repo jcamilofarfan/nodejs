@@ -1,3 +1,8 @@
 export default{
-    SECRET: "siscontable-api"
+    SECRET: "siscontable-api",
+    EMAIL:{
+        user: "",
+        pass: ""
+    }
 }
+

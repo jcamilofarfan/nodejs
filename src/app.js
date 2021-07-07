@@ -5,7 +5,7 @@ import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUI from "swagger-ui-express";
 
 
-import { createRoles } from "./libs/initialSetup";
+import { createRoles, createStatus } from "./libs/initialSetup";
 import { options } from "./swaggerOptions";
 
 import cookieParser  from 'cookie-parser';
@@ -19,7 +19,7 @@ const app = express()
 const specs = swaggerJSDoc(options);
 app.use(cookieParser());
 createRoles();
-
+createStatus();
 app.use(cors());
 app.set("pkg", pkg);
 app.use(express.json());

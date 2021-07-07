@@ -1,15 +1,18 @@
 import User from "../models/User";
 import Role from "../models/Role";
+import Status from "../models/Status";
 import config from "../config";
 
 import jwt from "jsonwebtoken";
+import { uuidv4 } from "uuid";
 
 export const signUp = async (req, res)=>{
-    const {username, email, password, roles}= req.body;
+    const {username, email, password, roles, status}= req.body;
     const newUser = new User ({
         username,
         email,
-        password: await User.encryptPassword(password)
+        password: await User.encryptPassword(password),
+        code: await uuidv4()
     });
     if (roles){
         const foundRoles = await Role.find({name: {$in: roles}})
@@ -18,10 +21,17 @@ export const signUp = async (req, res)=>{
         const role = await Role.findOne({name: "user"})
         newUser.roles = [role._id];
     }
+    if(status){
+        const foundStatus= await Status.find({name: {$in: status}})
+        newUser.status= foundStatus.map(status=>status._id)
+    }else{
+        const status= await Status.findOne({name: "unverified"})
+        newUser.status= status._id;
+    }
 
     const savedUser= await newUser.save();
     console.log(savedUser);
-    const token =jwt.sign({id: savedUser._id}, config.SECRET,{
+    const token =jwt.sign({email: savedUser.email, code: savedUser.code}, config.SECRET,{
         expiresIn: 86400
     })
     res.status(200).json({token})
