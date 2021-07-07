@@ -33,7 +33,7 @@ var verifyToken = /*#__PURE__*/function () {
         switch (_context.prev = _context.next) {
           case 0:
             _context.prev = 0;
-            token = req.headers["x-access-token"];
+            token = req.cookies.co_ss.token;
 
             if (token) {
               _context.next = 4;
@@ -65,24 +65,23 @@ var verifyToken = /*#__PURE__*/function () {
             }));
 
           case 11:
-            console.log(token);
             next();
-            _context.next = 18;
+            _context.next = 17;
             break;
 
-          case 15:
-            _context.prev = 15;
+          case 14:
+            _context.prev = 14;
             _context.t0 = _context["catch"](0);
             return _context.abrupt("return", res.status(401).json({
               message: "Unauthorized"
             }));
 
-          case 18:
+          case 17:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[0, 15]]);
+    }, _callee, null, [[0, 14]]);
   }));
 
   return function verifyToken(_x, _x2, _x3) {

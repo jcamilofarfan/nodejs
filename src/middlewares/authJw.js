@@ -6,7 +6,7 @@ import Role from "../models/Role";
 
 export const verifyToken = async (req, res, next) =>{
     try {
-        const token = req.headers["x-access-token"];
+        const token = req.cookies.co_ss.token;
 
         if(!token) return res.status(403).json({message: "No token provided"})
 
@@ -14,7 +14,6 @@ export const verifyToken = async (req, res, next) =>{
         req.userId = decoded.id
         const user =  await User.findById(req.userId, {password: 0})
         if (!user) return res.status(403).json({message: "no user found"})
-        console.log(token);
         next()
     } catch (error) {
         return res.status(401).json({message: "Unauthorized"})

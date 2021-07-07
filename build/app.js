@@ -11,6 +11,8 @@ var _morgan = _interopRequireDefault(require("morgan"));
 
 var _package = _interopRequireDefault(require("../package.json"));
 
+var _cookieParser = _interopRequireDefault(require("cookie-parser"));
+
 var _initialSetup = require("./libs/initialSetup");
 
 var _products = _interopRequireDefault(require("./routes/products.routes"));
@@ -22,6 +24,7 @@ var _user = _interopRequireDefault(require("./routes/user.routes"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var app = (0, _express["default"])();
+app.use((0, _cookieParser["default"])());
 (0, _initialSetup.createRoles)();
 app.set("pkg", _package["default"]);
 app.use(_express["default"].json());

@@ -9,9 +9,9 @@ var _User = _interopRequireDefault(require("../models/User"));
 
 var _Role = _interopRequireDefault(require("../models/Role"));
 
-var _jsonwebtoken = _interopRequireDefault(require("jsonwebtoken"));
-
 var _config = _interopRequireDefault(require("../config"));
+
+var _jsonwebtoken = _interopRequireDefault(require("jsonwebtoken"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -106,7 +106,7 @@ exports.signUp = signUp;
 
 var signIn = /*#__PURE__*/function () {
   var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(req, res) {
-    var userFound, matchPassword, token;
+    var userFound, matchPassword, token, cookie_name;
     return regeneratorRuntime.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
@@ -152,11 +152,15 @@ var signIn = /*#__PURE__*/function () {
             }, _config["default"].SECRET, {
               expiresIn: 86400
             });
+            cookie_name = "co_ss";
+            res.cookie(cookie_name, {
+              token: token
+            });
             res.json({
               token: token
             });
 
-          case 13:
+          case 15:
           case "end":
             return _context2.stop();
         }

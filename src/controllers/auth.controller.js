@@ -1,8 +1,8 @@
 import User from "../models/User";
 import Role from "../models/Role";
+import config from "../config";
 
 import jwt from "jsonwebtoken";
-import config from "../config";
 
 export const signUp = async (req, res)=>{
     const {username, email, password, roles}= req.body;
@@ -37,5 +37,8 @@ export const signIn = async (req, res)=>{
     const token = jwt.sign({id: userFound._id}, config.SECRET,{
         expiresIn: 86400
     })
+
+    const cookie_name= "co_ss";
+    res.cookie(cookie_name , {token})
     res.json({token})
 }
