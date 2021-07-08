@@ -14,7 +14,7 @@ import { verifySignup } from "../middlewares";
 
 /**
  * @swagger
- * /signup:
+ * /api/auth/signup:
  *  post:
  *    summary: Registro de usuario desde Formulario sin proteccion
  *    tags: [Sign]
@@ -26,11 +26,20 @@ router.post(
 );
 /**
  * @swagger
- * /signin:
+ * /api/auth/signin:
  *  post:
  *    summary: Inicio de sesion desde Formulario sin proteccion
  *    tags: [Sign]
  */
 router.post("/signin", authCtrl.signIn)
+
+/**
+ * @swagger
+ * /api/auth/verify/{token}:
+ *  get:
+ *      summary: Verificacion de correo con token
+ *      tags: [Sign]
+ */
+router.get("/verify/:token", authCtrl.confirm)
 
 export default router;

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ytsiscontables",
+  "private_key_id": "11b683968be89df422c46d5115d0123bd037540a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCXSp78IEtBNKB/\nFPhvDn+zhzn38sLHihSxi0I6owUdmUrtIU8OT56VgfkuGbleUnJ6je6TyRbAn7rp\ns62qb2V9PbChWRX19RBwf9BGYKJHnimSJe997iXt7MTyt/xDYUJxqnvfNVuKMOXB\nfoo5BcCYy8GvJ3Cp5cOFhPeUdMoTHL4jokHaexlLwhklvNyiLSm7Wry9JtcYRtNp\nYlkkUjHMF6RVwEw4z5Z94L63uORoS6RC+6CoO8hXxinameF35fj4SKtYtcqYxzTP\n0yHfqKTGL2lN94plu/Bi2FUgWce9FuGkkpa8j4batO7c3Io3+VYrtlZwcPVepTHD\nSzHqxxAvAgMBAAECggEADsQpPUl3nt8glRa6YriDDUYzCbjHewtGlseVSLzViHyI\nPBnGqgpqW4RKik3XclXQt5Z3xTPYxScx6pJvblWeDbnCLhVQV+e52YkYDm5rGFtf\nClUqiVt/lzfHRzte40KwZgCyQ2hlTVkVa6vKmOMvV5p3hn1ueR6kVTlTosk9Wd0L\nUUDnGdlwIdJNM3Ic2qaeWs5ethmPZYE/BEMDZkW1KgiGM53RQXkZ+E7DJBftuWlX\naQLEpk/OXUiiBBTEmHkU0r1Ea1Hsr3wnQnCwW+V/rJtwYtzOJs9g93QD3K2Abo5T\nEOaJnLjTuokEVsQsizbNxAdz1hzjMNtO5aEiGb1CQQKBgQDRuvF4oTUYk3vV6APa\nrM5ERMmdzZR4lyI4ixaV5+rrA+362l98frOIKhn8crAT3aPpWs3HTPzEKoJRzafj\n+HPOYYoVCVVDyQUkaLlaHQTY2GlOOzpTbhjiHdt6hkC98UEsdhuCORnNc0a26yJX\nD2jnEE4eXWCUWw8XbtwAu1ZtwQKBgQC4qzK5EJbypElDbmqxXSYGZ3g5/eii8HVJ\nyJ92Qy7O4v1oj5GF711LPoP24luRMYD53gbC4YV3waVyAZZz/jVNHWodVyXGNbhj\nlaDSe5YvsvonjEcmSylRbtTRxPd5vDIsZc+wJfN+t6oi5sLFqb2t99bDzuryQ4BX\nPuGgIY7Z7wKBgDfAFuI3EBMpWTjCRQwC9Y2mL2X4OOhZXGplZqqQjJzOXZtaIxnH\n4FdowaGepvmQ6Dpmvd6ls2c92Yh/P4rVB4ur1/XBll2/eNN11xeCMUCnPk7iZZ25\n3Xl18FrAh0M2d1mnR6a1IQvBAeIr3OQBn6QUbH+b2Ml27ysOeALlyZLBAoGAVDwT\nKQN+NzPlD1Mga8L3g1hTKPC+2wQgHAXdZw6CHXDA8p76XEOxJI9hlo3uAq64DEHQ\nh7hjLxsvom9C96nvGjvemX+VBXKfpx0rfJdPDHbxUHTWR4tlT3XkscLMt8S2hjXy\npIDLLvQMMVtdYNhqYx534l1SIivUMPfH50knZhUCgYAcyovGWWHSlBDg2+Xq6mCw\n+wqOwmkcXXHpYyDnpFF/WXKsxBUHyn0iaCwrRmvRuQL66RWx2T79n8htXk2Jbgbn\n5zZOGtFkX4U8MPQtGWYba9TnyJ7d/j/yzb2Ss/da3FErW+5KG3fkUWcL0cSeX+I7\nzUpIx3eHi7roGPOis/RhTA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "messagenode@ytsiscontables.iam.gserviceaccount.com",
+  "client_id": "107095400430764019366",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/messagenode%40ytsiscontables.iam.gserviceaccount.com"
+}
