@@ -1,6 +1,6 @@
 {
   "name": "nodejs",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Api para sistemas contables, autenticacion y permisos de usuarios",
   "main": "index.js",
   "scripts": {
